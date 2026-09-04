@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo dos Cabelos Cacheados</title>
+  <style>
+    :root {
+      --bg-color: #fdf6f0;
+      --card-bg: #ffffff;
+      --text-color: #4a3e3d;
+      --accent-color: #c87d55;
+      --border-color: #e8d5c8;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1a1514;
+      --card-bg: #2a2423;
+      --text-color: #f3ece7;
+      --accent-color: #e09f67;
+      --border-color: #423735;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    h1 {
+      margin: 0 0 1rem 0;
+      color: var(--accent-color);
+    }
+
+    .theme-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button {
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      border: 2px solid var(--accent-color);
+      padding: 10px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s;
+    }
+
+    button:hover {
+      background-color: var(--accent-color);
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--accent-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Universo Cacheado</h1>
+    <p>Dicas, cuidados e inspirações para seus caracóis</p>
+    <div class="theme-buttons">
+      <button onclick="setTheme('light')">Modo Claro</button>
+      <button onclick="setTheme('dark')">Modo Escuro</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500" alt="Cabelo cacheado bem definido">
+        <div class="card-content">
+          <h2>Hidratação Profunda</h2>
+          <p>Os fios cacheados tendem a ser mais ressecados nas pontas. A hidratação semanal repõe a água e devolve o brilho.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584297091622-af8e5ad23a41?w=500" alt="Mulher com cabelo cacheado volumoso">
+        <div class="card-content">
+          <h2>Técnicas de Finalização</h2>
+          <p>Experimente a fitagem ou o dedoliss para garantir definição prolongada e controle de frizz ao longo dos dias.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500" alt="Cabelo crespo e cacheado com brilho">
+        <div class="card-content">
+          <h2>Cronograma Capilar</h2>
+          <p>Intercale etapas de hidratação, nutrição e reconstrução para manter a saúde dos cachos sempre em dia.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Universo Cacheado - Valorize seu brilho natural</p>
+  </footer>
+
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    }
+  </script>
+
+</body>
+</html>
